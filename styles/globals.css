@@ -1,0 +1,18 @@
+@import "antd/dist/antd.css";
+
+/* 
+body,div,p,h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    padding: 0;
+} */
+
+.content-layout {
+    width: 1080px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+  }
+
+body {
+    background-color: aliceblue;
+}
