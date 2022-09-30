@@ -8,6 +8,7 @@ import {
   FireOutlined,
   FundViewOutlined,
 } from '@ant-design/icons';
+
 import ListItem from 'components/ListItem';
 import { prepareConnection } from 'db/index';
 import { User, Article } from 'db/entity';
@@ -57,7 +58,7 @@ const UserDetail = (props: any) => {
     (prev: any, next: any) => prev + next?.views,
     0
   );
-
+  
   return (
     <div className={styles.userDetail}>
       <div className={styles.left}>

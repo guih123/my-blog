@@ -37,7 +37,7 @@ const UserProfile = () => {
       }
     });
   };
-
+  
   return (
     <div className="content-layout">
       <div className={styles.userProfile}>

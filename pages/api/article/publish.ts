@@ -8,7 +8,6 @@ import { prepareConnection } from 'db/index';
 import { User, Article, Tag } from 'db/entity/index';
 import { EXCEPTION_ARTICLE } from 'pages/api/config/codes';
 
-
 export default withIronSessionApiRoute(publish, ironOptions);
 
 async function publish(req: NextApiRequest, res: NextApiResponse) {

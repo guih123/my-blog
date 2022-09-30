@@ -13,7 +13,6 @@ import { prepareConnection } from "db/index";
 import { Article } from 'db/entity';
 import { IArticle } from 'pages/api';
 
-
 interface IProps {
   article: IArticle,
   // tags: []
@@ -40,7 +39,6 @@ export async function getServerSideProps({ params }: any){
 
     // console.log('ssr tags ===>', article1?.tags);
     
-
     return {
       props: {
         article: JSON.parse(JSON.stringify(article)),
@@ -55,7 +53,7 @@ const MDEditor = dynamic(
   { ssr: false }
 );
 // function ModifyEditor({ article, tags }: IProps) {
-function ModifyEditor({ article}: IProps) {
+function ModifyEditor({ article }: IProps) {
   // const store = useStore();
   const { push, query } = useRouter();
   
@@ -76,7 +74,6 @@ function ModifyEditor({ article}: IProps) {
   const [tagIds, setTagIds] = useState([]);
   const [allTags, setAllTags] = useState([]);
   
-
   useEffect(() => {
     request.get('/api/tag/get').then((res: any) => {
       if (res?.code === 0) {
@@ -142,3 +139,4 @@ function ModifyEditor({ article}: IProps) {
 
 (ModifyEditor as any).layout = null;
 export default observer(ModifyEditor);
+

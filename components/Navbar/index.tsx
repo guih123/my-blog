@@ -25,7 +25,6 @@ const Navbar: NextPage = ()=>{
     } else {
       message.warning('请先登录');
     }
-
   };
   const handleLogin = ()=>{
     setIsShowLogin(true);
@@ -64,7 +63,7 @@ const Navbar: NextPage = ()=>{
 
   return (
     <div className={styles.navbar}> 
-        <section className={styles.logoArea}>BLOG-G</section>
+        <section className={styles.logoArea}>My-Blog</section>
         <section className={styles.linkArea}>
             {navs?.map((nav) => (
                 <Link key={nav?.label} href={nav?.value}>

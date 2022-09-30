@@ -1,4 +1,3 @@
-
 import { NextApiRequest, NextApiResponse } from 'next';
 import { withIronSessionApiRoute } from 'iron-session/next';
 import { ironOptions } from 'config/index';
@@ -22,7 +21,6 @@ async function get(req: NextApiRequest, res: NextApiResponse) {
       });
     },
   });
-
   const allTags = await tagRepo.find({
     relations: ['users'],
   });

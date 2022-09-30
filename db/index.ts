@@ -36,6 +36,6 @@ export const prepareConnection = () => {
       return connection;
     })();
   }
-
   return connectionReadyPromise;
 };
+

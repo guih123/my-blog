@@ -6,7 +6,6 @@ import { useStore } from 'store/index';
 import request from 'service/fetch';
 import styles from './index.module.scss';
 // const { TabPane } = Tabs;
-
 interface IUser {
   id: number;
   nickname: string;
@@ -20,6 +19,7 @@ interface ITag {
   article_count: number;
   users: IUser[];
 }
+
 const Tag = () => {
   const store = useStore();
   const [followTags, setFollowTags] = useState<ITag[]>();
@@ -37,6 +37,8 @@ const Tag = () => {
     })
   }, [needRefresh]);
 
+
+  
   const handleUnFollow = (tagId: number) => {
     request.post('/api/tag/follow', {
       type: 'unfollow',
